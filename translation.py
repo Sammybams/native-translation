@@ -1,12 +1,18 @@
 import requests, uuid, json
+from dotenv import load_dotenv
+import os
+from speech import Transcribe
+load_dotenv()
+
+
 
 # Add your key and endpoint
-key = "<your-translator-key>"
+key = os.getenv("TRANSLATOR_KEY")
 endpoint = "https://api.cognitive.microsofttranslator.com"
 
 # location, also known as region.
 # required if you're using a multi-service or regional (not global) resource. It can be found in the Azure portal on the Keys and Endpoint page.
-location = "<YOUR-RESOURCE-LOCATION>"
+location = "eastus"
 
 path = '/translate'
 constructed_url = endpoint + path
@@ -14,7 +20,7 @@ constructed_url = endpoint + path
 params = {
     'api-version': '3.0',
     'from': 'en',
-    'to': ['fr', 'zu']
+    'to': ['yo', 'ig', 'ha']
 }
 
 headers = {
@@ -27,7 +33,7 @@ headers = {
 
 # You can pass more than one object in body.
 body = [{
-    'text': 'I would really like to drive your car around the block a few times!'
+    'text': Transcribe()
 }]
 
 request = requests.post(constructed_url, params=params, headers=headers, json=body)

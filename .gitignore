@@ -2,3 +2,6 @@
 /include/
 /lib/
 pyvenv.cfg
+*.env
+station (1).wav
+__pycache__
