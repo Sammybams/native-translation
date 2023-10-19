@@ -12,7 +12,7 @@ cog_region = os.getenv('COG_SERVICE_REGION')
 
 # Configure speech service
 speech_config = speech_sdk.SpeechConfig(cog_key, cog_region)
-print('Ready to use speech service in:', speech_config.region)
+# print('Ready to use speech service in:', speech_config.region)
 
 def Transcribe():
     command = ''
@@ -28,7 +28,7 @@ def Transcribe():
     speech = speech_recognizer.recognize_once_async().get()
     if speech.reason == speech_sdk.ResultReason.RecognizedSpeech:
         command = speech.text
-        print(command)
+        # print(command)
     else:
         
         print(speech.reason)
