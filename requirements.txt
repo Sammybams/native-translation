@@ -1,0 +1,8 @@
+azure-cognitiveservices-speech==1.32.1
+certifi==2023.7.22
+charset-normalizer==3.3.0
+idna==3.4
+python-dotenv==0.21.1
+requests==2.31.0
+urllib3==2.0.7
+uuid==1.30
