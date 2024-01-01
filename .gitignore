@@ -3,5 +3,5 @@
 /lib/
 pyvenv.cfg
 *.env
-station (1).wav
+*.wav
 __pycache__
